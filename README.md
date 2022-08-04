@@ -19,7 +19,11 @@ Prettify your github profile using this amazing readme generator.
 ![Screen2](./screenshots/Screen%20Shot%202022-08-03%20at%2011.11.33%20PM.png)
 
 ## Demo in Google Drive
-[![Watch the video](./screenshots/Google_Drive_text_logo_grey.png)](https://drive.google.com/file/d/1atcaOouxKR7QFdGDPhQtO5EaaGVj_yfu/view?usp=sharing)
+[![Watch the video](./screenshots/Google_Drive_text_logo_grey.png)](https://drive.google.com/file/d/1atcaOouxKR7QFdGDPhQtO5EaaGVj_yfu/view)
+
+or
+
+https://drive.google.com/file/d/1atcaOouxKR7QFdGDPhQtO5EaaGVj_yfu/view
 
 # About me
 * Find me on GitHub: https://github.com/Summerjay0401
