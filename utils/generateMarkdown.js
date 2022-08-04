@@ -1,7 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
-
   let yourLicense = ''
   if(license === 'MIT License') {
     yourLicense = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
@@ -17,8 +14,6 @@ function renderLicenseBadge(license) {
   return yourLicense;
 };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderLicenseLink(license) {
   let yourLicenseLink = ''
   if(license === 'MIT License') {
@@ -35,26 +30,62 @@ function renderLicenseLink(license) {
   return yourLicenseLink;
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 function renderLicenseSection(license) {
   let licenseSection = '## License';
   if(license === 'N/A') {
-    return "";  
+    return '';  
   }
   return licenseSection;
 }
 
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  const {username, emailaddress, projectname, description, license, installation, tests, repoInfo, contribution, features} = data;
 
-`;
+  return `
+# ${projectname ?? ""}
+${renderLicenseBadge(license)}
+
+## Description
+
+${description ?? ""}
+
+## Table of Contents (Optional)
+
+If your README is long, add a table of contents to make it easy for users to find what they need.
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Features](#features)
+- [Tests](#tests)
+
+## Installation
+
+${installation ?? ""}
+
+## Usage
+
+${repoInfo ?? ""}
+
+${renderLicenseSection(license)}
+
+${renderLicenseLink(license)}
+
+## Features
+
+${features ?? ""}
+
+## Tests
+
+${tests ?? ""}
+
+## Questions
+Feel free to contact me for more questions.
+* Find me on GitHub: https://github.com/${username ?? ""}
+* E-mail: ${emailaddress ?? ""}
+`
 }
 
 module.exports = {
-  generateMarkdown,
-  renderLicenseBadge,
-  renderLicenseLink,
-  renderLicenseSection
+  generateMarkdown
 };

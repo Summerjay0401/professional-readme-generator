@@ -1,63 +1,8 @@
-// TODO: Include packages needed for this application
 const fs = require('fs/promises');
 const inquirer =require('inquirer');
 
-const {
-    generateMarkdown,
-    renderLicenseBadge,
-    renderLicenseLink,
-    renderLicenseSection
-} = require('./utils/generateMarkdown.js');
+const { generateMarkdown } = require('./utils/generateMarkdown.js');
 
-const readMeTemplate = ({username, emailaddress, projectname, description, license, installation, tests, repoInfo, contribution, features})=>{
-    return `
-# ${projectname ?? ""}
-${renderLicenseBadge(license)}
-
-## Description
-
-${description ?? ""}
-
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Features](#features)
-- [Tests](#tests)
-
-## Installation
-
-${installation ?? ""}
-
-## Usage
-
-${repoInfo ?? ""}
-
-${renderLicenseSection(license)}
-
-${renderLicenseLink(license)}
-
-
-## Features
-
-${features ?? ""}
-
-## Tests
-
-${tests ?? ""}
-
-## Questions
-Feel free to contact me for more questions.
-* Find me on GitHub: https://github.com/${username ?? ""}
-* E-mail: ${emailaddress ?? ""}
-    `
-}
-
-// TODO: Create an array of questions for user input
 const questions = [
     {
         type: "input",
@@ -118,7 +63,6 @@ const questions = [
     }
 ]
 
-// TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
         if (err) {
@@ -128,14 +72,13 @@ function writeToFile(fileName, data) {
     });
 }
 
-// TODO: Create a function to initialize app
 function init() {
 
     inquirer.prompt (questions).then(({username, emailaddress, projectname, description, license, installation, tests, repoInfo, contribution, features}) => {
         
-        const myReadMe = readMeTemplate({username, emailaddress, projectname, description, license, installation, tests, repoInfo, contribution, features});
+        const myReadMe = generateMarkdown({username, emailaddress, projectname, description, license, installation, tests, repoInfo, contribution, features});
         
-        writeToFile("README.md", myReadMe);
+        writeToFile("dist/README.md", myReadMe);
 
     });
 

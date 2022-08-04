@@ -1,45 +1,23 @@
 
-# jbdmjbscks
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# Professional ReadME Generator
 
 ## Description
 
-kjsbdkjsabc
+Prettify your github profile using this amazing readme generator.
 
+## Install Packages
 
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Features](#features)
-- [Tests](#tests)
-
-## Installation
-
-jhkjsabcds
+* npm i
 
 ## Usage
 
-cbkjdsbc
+1. npm run start
+2. readme file will be generated in dist folder
 
-## License
+#screenshots
 
-(https://opensource.org/licenses/MIT)
-
-
-## Features
-
-nckjsdbcn
-
-## Tests
-
-jsbdckjsbcd
-
-## Questions
-Feel free to contact me for more questions.
 * Find me on GitHub: https://github.com/Summerjay0401
-* E-mail: jxbkjsbc
+* E-mail: summerjadefrosal@gmail.com
+
+by Summer Jade Rosal
     
